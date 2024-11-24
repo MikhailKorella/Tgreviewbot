@@ -1,3 +1,6 @@
+"""
+Модуль с инициализацией бота
+"""
 import telebot
 from config import TOKEN
 
