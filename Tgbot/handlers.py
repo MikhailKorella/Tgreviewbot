@@ -1,6 +1,6 @@
 from datetime import datetime
 from keyboards import create_category_keyboard, create_subcategory_keyboard
-from main import bot
+from bot import bot
 from config import sheet
 
 # Обработчик старта
