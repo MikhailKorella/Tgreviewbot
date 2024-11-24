@@ -10,17 +10,11 @@ def create_category_keyboard():
     """
     Возвращает клавиатуру с кнопками выбора категории
     """
+    categories = ['Преподаватели', 'Образовательная программа', 'Студенческая жизнь', 'Кампус',
+                  'Общежитие', 'Столовая', 'Здоровье и спорт', 'Трудоустройство и карьера',
+                  'Технические вопросы', 'Другое']
     keyboard = types.ReplyKeyboardMarkup(row_width=1, resize_keyboard=True)
-    keyboard.add(types.KeyboardButton('Преподаватели'),
-                 types.KeyboardButton('Образовательная программа'),
-                 types.KeyboardButton('Студенческая жизнь'),
-                 types.KeyboardButton('Кампус'),
-                 types.KeyboardButton('Общежитие'),
-                 types.KeyboardButton('Столовая'),
-                 types.KeyboardButton('Здоровье и спорт'),
-                 types.KeyboardButton('Трудоустройство и карьера'),
-                 types.KeyboardButton('Технические вопросы'),
-                 types.KeyboardButton('Другое'))
+    keyboard.add(*[types.KeyboardButton(category) for category in categories])
     return keyboard
 
 # Клавиатура с выбором подкатегории в зависимости от категории
