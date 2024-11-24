@@ -1,3 +1,7 @@
+"""
+Модуль с обработчиками сообщений пользователя. В данном случае это обработка старта, выбора категории, подкатегории 
+и сообщения(отзыва) пользователя
+"""
 from datetime import datetime
 from keyboards import create_category_keyboard, create_subcategory_keyboard
 from bot import bot
