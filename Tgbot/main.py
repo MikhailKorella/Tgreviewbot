@@ -1,9 +1,5 @@
-import telebot
-from config import TOKEN
+from bot import bot
 from handlers import start
-
-# Создание бота
-bot = telebot.TeleBot(TOKEN)
 
 # Обработчик команды /start
 bot.message_handler(commands=['start'])(start)
